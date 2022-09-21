@@ -1,0 +1,30 @@
+<div class = "container p-5">
+    <div class = "card">
+        <div class = "card-header">
+            <h3 class = "panel-title">Home</h3>
+        </div>
+        <div class="card-body">
+            <button class = "btn btn-primary" (click) = "addProduct()">Add new product</button>
+            <button class = "btn btn-primary" (click) = "showProducts()">Show all products</button>
+            <table class = "table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td>{{product.id}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td><button class = "btn btn-warning" (click) = "modifyProduct(product.id)">Modify product</button>
+                            <button class = "btn btn-warning" (click) = "deleteProduct(product.id)">Delete product</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
