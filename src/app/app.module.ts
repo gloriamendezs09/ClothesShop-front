@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductsComponent } from './product/products.component';
+import { ProductFormComponent } from './product/product-form/product-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductsComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
